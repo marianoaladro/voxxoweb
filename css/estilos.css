@@ -1,0 +1,149 @@
+
+*{margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #797878;
+    color: white ;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+header{
+    padding: 5px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+nav ul  { 
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+        list-style: none;
+ }
+li {
+    padding: 10px;
+}
+ a { color: white; text-decoration: none; }
+
+
+/********************************CLASS**********************************/
+
+
+.logoVoxxo {
+    width: 200px;
+}
+
+.main_image{
+  width:100%
+ 
+}
+.linkNav{
+    font-size: 2rem;
+}
+
+/*aca vienen los grids para la pagina de render*/
+
+.render-container{
+    display: grid;
+    grid-template-areas: 
+    "img1       img2       img3"
+    "img4       img4       img5"
+    "img6       img7       .   ";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 2vh;
+}
+
+.img1{
+    grid-area: img1;
+}
+
+.img2{
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.img4{
+    grid-area: img4;
+}
+.img5{
+    grid-area: img5;
+}
+.img6{
+    grid-area: img6;
+}
+.img7{
+    grid-area: img7;
+}
+
+.render__imagen{
+    display: flex;
+    background-color: green;
+
+}
+
+/*Tamaño de la imagenes*/
+.Imagen {
+    width: 100%;
+    height: 100%;
+}
+
+/*media queries*/
+@media screen and (max-width:700px){
+    .render-container{
+        display: grid;
+        grid-template-areas: 
+        "img1"
+        "img2"
+        "img3"
+        "img4"
+        "img4"
+        "img5"
+        "img6"
+        "img7";
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-columns: 100%;
+        grid-row-gap: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .linkNav{
+        font-size: 1.3rem;
+    }    
+}
+
+@media screen and (max-width:500px){ 
+    
+    .header{
+        display: flex;
+    }
+    .linkNav{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:400px){ 
+
+    .linkNav{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:350px){ 
+
+    .linkNav{
+        font-size: 0.7rem;
+    }
+}
